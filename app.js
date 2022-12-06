@@ -1,13 +1,13 @@
-function randommRGB() {
+function randomRGB() {
     const r = Math.floor(Math.random() * 256);
-    const g = 0;
+    const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
     return `rgb(${r},${g},${b})`
 };
 
 const letter = document.querySelectorAll('.letter');
 const interValid = setInterval(function () {
-    for (let letter of letters) {
-        letter.style.color = randomRG();
+    for (let letter of letter) {
+        letter.style.color = randomRGB();
     }
 }, 1500);
